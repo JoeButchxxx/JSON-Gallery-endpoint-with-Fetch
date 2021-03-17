@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 
-const definitions = require('./data/definitions');
+const deefeffwefwefw = require('./');
 
 const app = express();
 
@@ -12,8 +12,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 /***********/
 
 // JSON -> application/json
-app.get('/api/v0/definitions', (req, res) => {
-  res.json(definitions);
+app.get('/api/v0/', (req, res) => {
+  res.json();
 })
 
 
