@@ -2,9 +2,8 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-const deefeffwefwefw = require('./');
+const gallery = require('./');
 
-const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -19,7 +18,8 @@ app.get('/api/v0/', (req, res) => {
 
 
 app.use(function (req, res) {
-  res.status(404).end();
+  res.status(404)
+  res.send('Custom 404: File Not Found')
 });
 
 const PORT = process.env.PORT || 3000
