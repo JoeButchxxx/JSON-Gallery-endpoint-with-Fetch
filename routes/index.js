@@ -19,7 +19,7 @@ Router.get("/", function (request, response) {
 })
 
 
-Router.get('/', function (request, response) {
+Router.get('./404', function (request, response) {
   response.status(404);
   response.render('./pages/404', {
     pageTitle: "404 Page"
