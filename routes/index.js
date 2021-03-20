@@ -4,7 +4,7 @@ const Router = express.Router();
 
 Router.use(function (request, response, next) {
   response.locals = {
-    siteTitle: "CPNT-A4",
+    siteTitle: "CPNT-262-A4",
     tagline: "JSON",
     copyright: "&copy; Joseph Butcher Studios 2021"
   }
