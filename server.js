@@ -17,12 +17,12 @@ app.get('/api/v0/', (req, res) => {
 })
 
 
-app.use(function (req, res) {
-  res.status(404)
-  res.send('Custom 404: File Not Found')
+app.use(function (request, response) {
+  response.status(404).sendFile(path.join(__dirname, 'public', '404.html'));
 });
 
 const PORT = process.env.PORT || 3000
+
 app.listen(PORT, function () {
   console.log(`Listening on port ${PORT}.`)
 })
