@@ -13,7 +13,7 @@ Router.use(function (request, response, next) {
 
 
 Router.get("/", function (request, response) {
-  response.render('./pages/index', {
+  response.render('pages/index', {
     pageTitle: "Home Page"
   });
 })
@@ -21,7 +21,7 @@ Router.get("/", function (request, response) {
 
 Router.get('./404', function (request, response) {
   response.status(404);
-  response.render('./pages/404', {
+  response.render('pages/404', {
     pageTitle: "404 Page"
   });
 })
