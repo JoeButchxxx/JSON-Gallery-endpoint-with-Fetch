@@ -1,16 +1,22 @@
 const express = require('express')
 
-const router = express.Router()
+const Router = express.Router()
 
+Router.use(function (request, response, next) {
+  response.locals = {
 
-
-router.get('/pages', (req, res) => {
-  res.render('index', { pageTitle: "Home Page" })
+  }
+  next();
 })
 
 
-router.get('/pages', (req, res) => {
-  res.render('pages/404', { pageTitle: "404 Page" })
+Router.get("/", function (request, response) {
+  response.render('index', { pageTitle: "Home Page" })
 })
 
-module.exports = router;
+
+Router.get('/pages', (request, response) => {
+  response.render('pages/404', { pageTitle: "404 Page" })
+})
+
+module.exports = Router;

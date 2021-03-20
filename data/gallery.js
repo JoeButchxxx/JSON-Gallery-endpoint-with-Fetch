@@ -1,4 +1,6 @@
- [{
+module.exports = [
+
+  {
     "id": 0,
     "title": "Smoking Aces",
     "description": "A hand smoking with a dark, red, mysterious background.",
