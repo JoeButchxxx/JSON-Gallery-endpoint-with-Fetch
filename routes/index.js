@@ -8,13 +8,13 @@ router.use((require, response, next) => {
 })
 
 router.get('/', (request, response) => {
-  response.render('pages/index', { pageTitle: 'Home' })
+  response.render('./pages/index', { pageTitle: 'Home' })
 });
 
 
 router.get('/404', function (request, response) {
   response.status(404);
-  response.render('pages/404', { pageTitle: "404 Page" });
+  response.render('./pages/404', { pageTitle: "404 Page" });
 });
 
 

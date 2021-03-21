@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const imageObject = require('../../data/gallery');
+const gallery = require('../../data/gallery.js');
 
 
 
