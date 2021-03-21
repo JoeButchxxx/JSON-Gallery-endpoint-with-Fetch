@@ -1,16 +1,16 @@
 // Downloaded Dependencies
 const express = require('express');
 const index = require('./routes');
-const v0 = require('./routes/api/v0')
+
 
 const app = express();
 app.set('view engine', 'ejs');
+const path = require("path");
 
-
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, './public')));
 
 app.use("/", index);
-app.use('/api/v0', v0);
+
 
 // ** Custom 404 Response **
 app.use((req, res) => {

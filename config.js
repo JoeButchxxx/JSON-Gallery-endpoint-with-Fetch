@@ -1,3 +1,4 @@
 module.exports = {
-  siteTitle: 'cpnt-262-a4',
+  siteTitle: 'CPNT-262-A4',
+  indexPageTitle: 'Gallery'
 }
