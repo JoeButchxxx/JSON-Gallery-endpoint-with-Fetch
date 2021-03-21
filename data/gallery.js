@@ -1,4 +1,4 @@
-module.exports = [
+const imageObject = [
 
   {
     "id": 0,
@@ -133,4 +133,6 @@ module.exports = [
     "credit": "Bianca Berg",
     "creditURL": "https://unsplash.com/@biancaberg"
   }
-]
+];
+
+module.exports = imageObject;

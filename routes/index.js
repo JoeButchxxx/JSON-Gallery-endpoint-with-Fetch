@@ -1,29 +1,21 @@
 const express = require('express');
+const router = express.Router();
+const config = require('../config')
 
-const Router = express.Router();
-
-Router.use(function (request, response, next) {
-  response.locals = {
-    siteTitle: "CPNT-262-A4",
-    tagline: "JSON",
-    copyright: "&copy; Joseph Butcher Studios 2021"
-  }
-  next();
+router.use((require, response, next) => {
+  response.locals = config
+  next()
 })
 
-
-Router.get("/", function (request, response) {
-  response.render('pages/index', {
-    pageTitle: "Home Page"
-  });
-})
+router.get('/', (request, response) => {
+  response.render('pages/index', { pageTitle: 'Home' })
+});
 
 
-Router.get('./404', function (request, response) {
+router.get('/404', function (request, response) {
   response.status(404);
-  response.render('pages/404', {
-    pageTitle: "404 Page"
-  });
-})
+  response.render('pages/404', { pageTitle: "404 Page" });
+});
 
-module.exports = Router;
+
+module.exports = router;
