@@ -13,10 +13,10 @@ app.use("/", index);
 
 
 // ** Custom 404 Response **
-app.use((req, res) => {
-  res.status(404)
-  res.redirect('/404')
-});
+//app.use((req, res) => {
+//res.status(404)
+// res.send('404.ejs', '404')
+//});
 
 const PORT = process.env.PORT || 3000
 
