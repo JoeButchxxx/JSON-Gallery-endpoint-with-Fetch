@@ -10,10 +10,11 @@ fetch(endpoint)
 
   })
 
-  .then((gallery) => {
+  .then((data) => {
+    const imgArr = data;
     const gallery = document.querySelector(".gallery");
 
-    for (let i = 0; i <= imageObject.length; i++) {
+    for (let i = 0; i < imgArr.length; i++) {
 
       //**FIGURE CREATED TO HOUSE IMAGES**
 
@@ -23,20 +24,21 @@ fetch(endpoint)
       //**H3 ELEMENT CREATED FOR IMAGE TITLE**
 
       const imageTitle = document.createElement('h3');
-      imageTitle.innerText = `${imageObject[i].title}`;
+      imageTitle.innerText = `${imgArr[i].title}`;
+
       imageFigure.append(imageTitle);
 
       //**ANCHOR ELEMENT CREATED FOR ORIGINAL IMAGE LINK**
 
       const imageLink = document.createElement('a');
-      imageLink.href = `${imageObject[i].linkURL}`;
+      imageLink.href = `${imgArr[i].linkURL}`;
       imageFigure.append(imageLink);
 
       //**IMG ELEMENT CREATED TO RETREIVE LOCALY HOSTED IMAGE AND CREATE ALT FOR ACCESIBILITY**
 
       const figLinkImg = document.createElement('img');
-      figLinkImg.src = `${imageObject[i].pathURL}`;
-      figLinkImg.alt = `${imageObject[i].description}`;
+      figLinkImg.src = `${imgArr[i].pathURL}`;
+      figLinkImg.alt = `${imgArr[i].description}`;
       imageLink.append(figLinkImg);
 
       //**FIGCAPTION ELEMENT CREATED TO GIVE CREDIT AND LINK TO THEIR PERSONAL ACCOUNT**
@@ -44,8 +46,8 @@ fetch(endpoint)
       const imageCaption = document.createElement('figcaption');
       imageFigure.append(imageCaption);
       const figureLink = document.createElement('a');
-      figureLink.href = `${imageObject[i].creditURL}`;
-      figureLink.innerText = `Photographer credit: ${imageObject[i].credit}`;
+      figureLink.href = `${imgArr[i].creditURL}`;
+      figureLink.innerText = `Photographer credit: ${imgArr[i].credit}`;
       imageCaption.append(figureLink);
     };
   })
