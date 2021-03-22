@@ -1,6 +1,8 @@
+// ** ENDPOINT **
 const endpoint = '/api/v0/gallery';
-
+// ** FETCH **
 fetch(endpoint)
+  // ** ERROR HANDLING **
   .then((response) => {
 
     if (!response.ok) {
@@ -9,7 +11,7 @@ fetch(endpoint)
     return response.json();
 
   })
-
+  // ** GALLERY LOADING **
   .then((data) => {
     const imgArr = data;
     const gallery = document.querySelector(".gallery");
@@ -51,11 +53,9 @@ fetch(endpoint)
       imageCaption.append(figureLink);
     };
   })
-
+  // ** CATCH THE ERRORS **
   .catch((err) => {
     console.log(err);
   });
-
-//**FOR LOOP TO CREATE GALLERY INSIDE index.html DIV**
 
 

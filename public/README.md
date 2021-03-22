@@ -1,13 +1,9 @@
-# CPNT - 262 - A3
-
-## Joseph Butcher
-
-
+# CPNT - 262 - A4 - Joseph Butcher
+## JSON gallery endpoint with fetch
 
 ### GitHub Repo & Pages
-- https://github.com/JoeButchxxx/cpnt-262-a2
-- https://joebutchxxx.github.io/cpnt-262-a2/
-
+- GitHub Repo Link https://github.com/JoeButchxxx/cpnt-262-a4
+- Heroku Link 
 
 ### Sources & Credit
 
