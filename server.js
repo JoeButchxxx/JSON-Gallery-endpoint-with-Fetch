@@ -13,7 +13,7 @@ app.use('/', (req, res, next) => {
   res.locals.siteTitle = 'CPNT 262 A4 - Joseph Butcher';
   next();
 })
-
+// ** HOME PAGE **
 app.use('/', index)
 // ** ERROR PAGE **
 app.use('/', (req, res) => {
