@@ -1,9 +1,9 @@
 const express = require('express');
-const router = express.Router();
 const config = require('../config');
+const router = express.Router();
 
 
-router.use((require, response, next) => {
+router.use((request, response, next) => {
   response.locals = config
   next()
 })
@@ -13,8 +13,7 @@ router.get('/', (request, response) => {
 })
 
 
-router.get('/404', function (request, response) {
-  response.status(404);
+router.get('/', function (request, response) {
   response.render('pages/404', { pageTitle: "404 Page" });
 })
 

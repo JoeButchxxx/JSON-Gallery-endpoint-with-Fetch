@@ -1,4 +1,3 @@
-'use strict'
 const endpoint = '/api/v0/gallery';
 
 fetch(endpoint)

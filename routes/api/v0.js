@@ -1,11 +1,11 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express')
+const imageObject = require('../../data/gallery')
 
-const imageObject = require('../../data/gallery');
-router.get('/gallery', (req, res) => {
+const router = express.Router()
+router.get('/gallery', (require, response) => {
 
-  res.json(imageObject);
+  response.json(imageObject)
 
 
 });
-module.exports = router;
+module.exports = router
