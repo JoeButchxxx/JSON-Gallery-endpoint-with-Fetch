@@ -5,7 +5,7 @@
 - GitHub Repo Link https://github.com/JoeButchxxx/cpnt-262-a4
 - Heroku Link https://josephbutcher-cpnt-262-a4.herokuapp.com/
 
-### Comment's and Take Aways
+### Comments and Take Aways
 This assignment was challenging but also enjoyable. I struggled to grasp the fetch and route, but i re read a bunch of notes and finally got some basic html to show up. A few more hours of debugging and realising i had my path directories a little messed up things start working.
 
 I have personally noticed growth in myself during 262. I am starting to understand the language of JavaScript, which is also improving my problem solving skills in coding.
